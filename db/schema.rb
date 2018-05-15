@@ -11,9 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180515134849) do
+ActiveRecord::Schema.define(version: 20180515150536) do
 
   create_table "customers", force: :cascade do |t|
+    t.string   "last"
+    t.string   "first"
+    t.string   "zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -23,6 +26,13 @@ ActiveRecord::Schema.define(version: 20180515134849) do
     t.string   "description"
     t.string   "trailer"
     t.decimal  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.integer  "game_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

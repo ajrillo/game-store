@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
+  get 'showcustgames/custnamein'
+  post 'showcustgames/custnamein'
+
+  get 'showcustgames/gamesout'
+  post 'showcustgames/gamesout'
+  
+  get 'sessions/new'
+
+  resources :purchases
   resources :customers
+
   get 'gamesout/outgames'
 
   resources :games

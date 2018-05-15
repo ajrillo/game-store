@@ -1,0 +1,19 @@
+<h3>Please enter the Lastname of the customer for whom you want the games purchased.</h3>
+
+<%= form_tag(showcustgames_gamesout_path, :controller => "showcustgames", :action => "gamesout", :method => "post") do %>
+
+<div class="field">
+
+    <%= label_tag :Customer_Name %><br>
+    <%= text_field_tag :customer_name_in %>
+</div>
+
+
+<div class="actions">
+    
+    <%= submit_tag "Submit Customer Name" %>
+    
+    
+</div>
+
+<% end %>

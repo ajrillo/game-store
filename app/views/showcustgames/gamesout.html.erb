@@ -1,0 +1,22 @@
+<center><h1>These are the games for <%= @customer_name %></h1></center><br><br>
+
+
+<center>
+    <table width = 65% border = 1>
+        <tr><th>Game Name</th><th>Game Description</th><th>Game Price</th></tr>
+        <% @games_list.each do |m| %>
+        
+        <tr><td><%= m.trailer %></td><td><%= m.description %></td><td><%= m.price %></td></tr>
+        <% end %> </table></center><br><br>
+        
+        
+        
+        
+        
+        
+    </table>
+    
+    
+    
+    
+</center>
