@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<center><h1>Games for Sale</h1></center>
+<hr>
+
+<center>
+    
+    <table class="" width = 80% border = 0 >
+         
+         <tr><th>Title</th><th>Description</th><th>Trailer</th><th>Price</th></tr>
+         
+         
+     <% @gamesout.each do |f| %>
+     
+         <tr>
+             <td><%= image_tag(f.title,:size => '150x150') %></td>
+             <td><%= f.description %></td>
+             <td><%= "#{f.trailer}" %></td>
+             <td><%=f.price%></td>
+         </tr>
+     
+     
+     <% end %>
+    </table>
+    
+</center>
+
+<p class="w3-button w3-black"> <%= link_to "Return to Home Page", root_path %> </p>

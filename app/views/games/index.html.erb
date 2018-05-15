@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Listing Games</h1></center><hr>
+
+<center><table class="" width= 80%>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Trailer</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.description %></td>
+        <td><%= "#{game.trailer}" %></td>
+        <td><%= game.price %></td>
+        <td><%= link_to 'Show', game, class:"w3-button w3-green w3-border" %></td>
+        <td><%= link_to 'Edit', edit_game_path(game), class:"w3-button w3-yellow w3-border" %></td>
+        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' }, class:"w3-button w3-red w3-border" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table></center>
+
+<br>
+
+<p class="w3-button w3-black"><%= link_to 'New Game', new_game_path %></p><br>
+
+
+<p class="w3-button w3-black"><%= link_to "Return to Home Page ", root_path %></p>

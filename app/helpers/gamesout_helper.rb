@@ -1,0 +1,2 @@
+module GamesoutHelper
+end
