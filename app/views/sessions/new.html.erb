@@ -1,0 +1,18 @@
+<h2>The Maintenance Functions are restricted to authorized Users Only!</h2>
+<h2>Login Below</h2>
+
+<%= form_tag login_url do %>
+
+<p>
+    <label for="Userid">Userid</label>
+    <%= text_field_tag :userid, params[:userid] %>
+</p>
+
+<p>
+    <label for="password">Password:</label>
+    <%= password_field_tag :password, params[:password] %>
+</p>
+
+<%= submit_tag "login" %>
+
+<% end %>

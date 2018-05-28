@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  resources :users
   get 'showcustgames/custnamein'
   post 'showcustgames/custnamein'
 
@@ -18,6 +23,14 @@ Rails.application.routes.draw do
   get 'starter/home'
   
   root :to => 'starter#home'
+  resources :users
+  resources :games
+  resources :customers
+  
+  controller :sessions do
+  get 'login' => :new
+  post 'login' => :create
+end
   
 
   # The priority is based upon order of creation: first created -> highest priority.

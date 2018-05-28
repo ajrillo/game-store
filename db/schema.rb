@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180515150536) do
+ActiveRecord::Schema.define(version: 20180528022819) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "last"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 20180515150536) do
     t.integer  "game_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "userid"
+    t.string   "password_digest"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end

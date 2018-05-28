@@ -16,9 +16,9 @@
       <tr>
         <td><%= purchase.customer_id %></td>
         <td><%= purchase.game_id %></td>
-        <td><%= link_to 'Show', purchase %></td>
-        <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
-        <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', purchase, class:"w3-button w3-green w3-border" %></td>
+        <td><%= link_to 'Edit', edit_purchase_path(purchase), class:"w3-button w3-yellow w3-border" %></td>
+        <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' }, class:"w3-button w3-red w3-border" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Purchase', new_purchase_path %>
+<p class="w3-button w3-black"><%= link_to 'New Purchase', new_purchase_path %></p><br>
+
+<p class="w3-button w3-black"><%= link_to "Maintenance", maintenance_mainview_path %></p><br>
