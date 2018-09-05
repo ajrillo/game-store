@@ -15,7 +15,7 @@
          <tr>
              <td><%= image_tag(f.title,:size => '150x150') %></td>
              <td><%= f.description %></td>
-             <td><%= "#{f.trailer}" %></td>
+             <td><%= link_to f.title, f.trailer, :target => "_blank" %></td>
              <td><%=f.price%></td>
          </tr>
      

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
+
   resources :users
   get 'showcustgames/custnamein'
   post 'showcustgames/custnamein'
@@ -23,9 +24,6 @@ Rails.application.routes.draw do
   get 'starter/home'
   
   root :to => 'starter#home'
-  resources :users
-  resources :games
-  resources :customers
   
   controller :sessions do
   get 'login' => :new

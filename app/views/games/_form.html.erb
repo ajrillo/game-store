@@ -1,3 +1,43 @@
+<script src="../_js/jquery-1.7.2.min.js"></script>
+<script>
+$(document).ready(function() { 
+outtoConfirm = function()
+{
+$('body').css('background-color','#804000');
+
+$('h1').after('<center> <h2> Check all data. Make changes if necessary. Then hit the <b>"Submit"</b> button </h2></center>');
+var titlein, descriptionin, trailerin, pricein; 
+titlein = $('#game_title').val();
+descriptionin = $('#game_description').val();
+trailerin= $('#game_trailer').val();
+pricein= $('#game_price').val();
+
+$('#game_title').css('background-color', 'yellow');
+$('#game_title').val(titlein);
+$('#game_description').css('background-color', 'yellow');
+$('#game_description').val(descriptionin);
+$('#game_trailer').css('background-color', 'yellow');
+$('#game_trailer').val(trailerin); 
+$('#game_price').css('background-color', 'yellow');
+$('#game_price').val(pricein);
+$('#game_price').after('<p><input name="submitButton" type="submit" id="submission" value="Submit Confirmed Data" length = 20> </p>');
+$('#confirmButton').remove();
+$('#submission').hover(function()
+{ 
+$(this).css('background-color', 'tan') 
+
+
+}); //end 
+}
+$('#confirmButton').click(outtoConfirm); 
+}); //end ready
+</script>
+
+
+</script>
+
+
+
 <%= form_for(@game) do |f| %>
   <% if @game.errors.any? %>
     <div id="error_explanation">
@@ -27,7 +67,6 @@
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+<input name="submitButton" type="submit" id="confirmButton" value="Submit Data" length = 20> </p>
 <% end %>
